@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ameeraz Beauty Salon - Modern Hair & Beauty in Lahore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .hero-bg {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 105, 180, 0.8),
+            rgba(0, 191, 255, 0.8)
+          ),
+          url("https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/99b1e2ee-d3eb-45ca-a8e2-f6ef9876f1b5.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 4rem;
+        text-transform: uppercase;
+        background: -webkit-linear-gradient(45deg, #cf2963, #8633a7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #d2527f;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 0;
+        display: inline-block;
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+      .contact-section {
+        background: url("https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b2a8fe4-5972-43db-b35c-54d877aff10f.png");
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 0;
+      }
+      .map-container iframe {
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white bg-opacity-90 backdrop-blur-md z-10 shadow-md"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <div class="nav-logo">Ameeraz</div>
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-pink-500 transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-pink-500 transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-pink-500 transition-colors duration-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-pink-500 transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button class="md:hidden" id="menu-toggle">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white px-4 py-2 shadow-lg"
+      >
+        <a href="#home" class="block py-2 text-gray-700">Home</a>
+        <a href="#about" class="block py-2 text-gray-700">About</a>
+        <a href="#services" class="block py-2 text-gray-700">Services</a>
+        <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-20">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white fade-in"
+      >
+        <h1 class="logo mb-4">Ameeraz</h1>
+        <p class="text-xl mb-6 max-w-4xl mx-auto leading-relaxed">
+          Ameeraz Beauty Salon in Lahore offers a range of services including
+          hair, skin, and wellness treatments.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8"
+        >
+          <a
+            href="#services"
+            class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg tracking-wide"
+            >Explore Our Premium Services</a
+          >
+          <a
+            href="#contact"
+            class="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition-all duration-300 shadow-lg tracking-wide"
+            >Schedule Your Appointment</a
+          >
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3a11899d-1e85-484d-aaac-e96978323317.png"
+            alt="Cozy and elegant beauty salon interior with marble countertops, plush seats, and soft lighting showcasing a modern beauty bar with grooming tools and mirrors reflecting gentle glows from chandelier lights"
+            class="rounded-lg shadow-xl max-w-full h-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+          About Ameeraz
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg mb-6 text-gray-700">
+              At Ameeraz, we blend timeless elegance with cutting-edge
+              techniques to deliver unparalleled beauty experiences. Our expert
+              stylists and therapists are dedicated to enhancing your natural
+              beauty and boosting your confidence.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>Certified professional staff</li>
+              <li>Premium quality products</li>
+              <li>Personalized consultations</li>
+              <li>Hygiene and safety first</li>
+            </ul>
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/56f3d70c-f6f0-489c-ae0d-d6c771af01e3.png"
+              alt="Professional beauty expert applying a luxurious facial mask with natural ingredients on a client's skin in a serene spa setting with aromatic candles and soft pastel color scheme"
+              class="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+          Our Services
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="service-card bg-white p-8 rounded-xl shadow-md">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5bbc1de3-fc3f-44ae-bbf2-eb9e45ade2ca.png"
+              alt="Stylish hair cut demonstration with scissors and comb in hands of skilled stylist on mannequin head featuring layers and modern straight cut with shine"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-semibold mb-4 text-pink-600">
+              Hair Styling
+            </h3>
+            <p class="text-gray-700">
+              Transform your look with our expert hair cuts, colors, and
+              treatments using the finest products.
+            </p>
+          </div>
+          <div class="service-card bg-white p-8 rounded-xl shadow-md">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0d8ed18a-11a5-482c-b65d-3cb0bef367f2.png"
+              alt="Calming facial treatment session showing massage techniques on face with natural oils and relaxed client in zen-like environment with green plants"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-semibold mb-4 text-pink-600">Skin Care</h3>
+            <p class="text-gray-700">
+              Revitalize your skin with our rejuvenating facials, peels, and
+              personalized skincare routines.
+            </p>
+          </div>
+          <div class="service-card bg-white p-8 rounded-xl shadow-md">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/00bbe821-740e-4a37-8ef6-f496de07d886.png"
+              alt="Elegant nail art showcase with intricate designs on manicured hands using gel polish in metallic gold and diamond patterns on crystal acrylic material"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-semibold mb-4 text-pink-600">Nail Care</h3>
+            <p class="text-gray-700">
+              Pamper your nails with our professional manicures, pedicures, and
+              stunning nail art designs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+          What Our Clients Say
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="testimonial-card bg-pink-50 p-8 rounded-xl shadow-md transform transition-transform duration-500 hover:scale-105 opacity-0 translate-y-10"
+          >
+            <p class="text-gray-800 italic mb-6">
+              "I'm glad to share the reviews of nanoplastia after 2 washes. My
+              hair is soft silky, shiny and straight as well. The team is very
+              cooperative and active. The response of the media team is very
+              quick. Highly recommended."
+            </p>
+            <p class="font-semibold text-pink-600">- Happy Client</p>
+          </div>
+          <div
+            class="testimonial-card bg-pink-50 p-8 rounded-xl shadow-md transform transition-transform duration-500 hover:scale-105 opacity-0 translate-y-10"
+          >
+            <p class="text-gray-800 italic mb-6">
+              "I got a hair cut of my own choice... They did a perfect job. I am
+              satisfied with their services regarding hair cut.. Moreover, staff
+              is polite and decent."
+            </p>
+            <p class="font-semibold text-pink-600">- Satisfied Customer</p>
+          </div>
+          <div
+            class="testimonial-card bg-pink-50 p-8 rounded-xl shadow-md transform transition-transform duration-500 hover:scale-105 opacity-0 translate-y-10"
+          >
+            <p class="text-gray-800 italic mb-6">
+              "I've done my keratin + extenso treatment, awesome results highly
+              recommended such a lovely staff especially miss Naseem and miss
+              Sumaira. Fully satisfied, thank you. Keep doing good work."
+            </p>
+            <p class="font-semibold text-pink-600">- Delighted Client</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-shadow-2xs">
+          Contact Us
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-pink-500">
+              Get In Touch
+            </h3>
+            <div
+              class="space-y-4 p-4 max-w-max py-12 bg-gray-900/60 rounded-lg"
+            >
+              <p><strong>Phone:</strong> 0322-848-4442 | 0334-4349963</p>
+              <p>
+                <strong>Address:</strong> Al-Hafeez Tower, MM Alam Rd, <br />
+                Block C1 Gulberg, Lahore, 54000, Pakistan
+              </p>
+              <p>
+                <strong>Location:</strong> Conveniently located in Al-Hafeez
+                Tower
+              </p>
+            </div>
+          </div>
+          <div class="map-container">
+            <h3 class="text-2xl font-semibold mb-6 text-shadow-2xs">Find Us</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.3972238745896!2d74.34822387469612!3d31.51324834749549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905789c90ca69%3A0x89d7a83b83661bea!2sAmeeraz%20Beauty%20Salon!5e0!3m2!1sen!2s!4v1757003697184!5m2!1sen!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>
+          © 2025 Ameeraz Beauty Salon. All rights reserved. Designed with
+          passion in Lahore.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+          if (window.innerWidth < 768) {
+            document.getElementById("mobile-menu").classList.add("hidden");
+          }
+        });
+      });
+
+      // Fade in animation on scroll
+      window.addEventListener("scroll", function () {
+        const elements = document.querySelectorAll(".fade-in");
+        elements.forEach((element) => {
+          const position = element.getBoundingClientRect();
+          if (position.top < window.innerHeight - 100) {
+            element.style.animationDelay = "0s";
+          }
+        });
+      });
+
+      // Animate testimonials on scroll
+      function animateTestimonials() {
+        const testimonials = document.querySelectorAll(".testimonial-card");
+        const windowBottom = window.innerHeight;
+
+        testimonials.forEach((testimonial, index) => {
+          const rect = testimonial.getBoundingClientRect();
+          if (rect.top < windowBottom - 100) {
+            setTimeout(() => {
+              testimonial.style.opacity = "1";
+              testimonial.style.transform = "translateY(0)";
+            }, index * 200);
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animateTestimonials);
+      window.addEventListener("load", animateTestimonials);
+    </script>
+  </body>
+</html>
